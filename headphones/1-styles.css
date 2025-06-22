@@ -1,0 +1,116 @@
+:root{
+    --link-hover-color: #FF6565;
+    --default-text-color: #09152b;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+@font-face {
+    font-family: 'Source Sans Pro'; ;
+    src: url(fonts/SourceSansPro-Regular.otf) format('opentype');
+}
+@font-face {
+    font-family: 'Source Sans Pro Semibold';
+    src: url(fonts/SourceSansPro-Semibold.otf) format('opentype');
+}
+@font-face {
+    font-family: 'Source Sans Pro Bold';
+    src: url(fonts/SourceSansPro-Bold.otf) format('opentype');
+}
+@font-face {
+    font-family: 'Source Sans Pro Light';
+    src: url(fonts/SourceSansPro-Light.otf) format('opentype');
+}
+.about-section{
+    position: relative;
+    margin: 120px 150px 80px 150px; 
+    font-family: 'Source Sans Pro';
+}
+.about-text{
+    text-align: center;
+    padding: 0 20%;
+    color: var(--default-text-color);
+    
+}
+.about-text h2{
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+.about-text p{
+    font-size: 18px;
+    line-height: 35px;
+    margin-bottom: 100px;
+}
+.about-icons{
+    margin: 0 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.icon-container{
+    width: 250px;
+    text-align: center;
+}
+.icon-container h3{
+    margin: 20px 0;
+}
+.icon-container p{
+    font-size: 16px;
+    line-height: 30px;
+}
+i.icon{
+    font-size: 100px;
+    color: var(--link-hover-color);
+}
+@media screen and (max-width: 1024px){
+    .about-section{
+        margin: 70px 100px 80px 100px;
+    }
+    .about-text{
+        padding: 0 10%;
+    }
+    .about-text p{
+        margin-bottom: 70px;
+    }
+    .about-icons{
+        margin: 0;
+    }
+}
+@media screen and (max-width: 768px){
+    .about-section{
+        margin: 70px;
+    }
+    .about-text h2 {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+    .about-text p{
+        font-size: 17px;
+        margin-bottom: 50px;
+    }
+    .icon-container h3 {
+        margin: 10px 0;
+        font-size: 16px;
+    }
+    .icon-container p{
+        font-size: 12px;
+        line-height: 26px;
+    }
+    i.icon{
+        font-size: 80px;
+    }
+}
+@media screen and (max-width: 425px){
+    .about-section{
+        margin: 45px 30px;
+    }
+    .about-text{
+        padding: 0 2%;
+    }
+    .about-icons{
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+}
