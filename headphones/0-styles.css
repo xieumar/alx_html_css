@@ -220,3 +220,11 @@ button:hover, button:active{
     }
 
 }
+@media screen and (max-width: 375px) {
+    .nav-logo{
+      margin-right: 30%;
+    }
+    .hero-section {
+        margin-top: -70%;
+    }
+}
