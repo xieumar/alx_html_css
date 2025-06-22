@@ -1,1 +1,1 @@
-This repository contains the webpage for a headphone company
+This directory contains the html and css implementation of the headphones website
