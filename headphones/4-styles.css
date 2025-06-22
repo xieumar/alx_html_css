@@ -1,0 +1,557 @@
+:root{
+    --link-hover-color: #FF6565;
+    --default-text-color-light: #fff;
+    --default-text-color-dark: #09152b;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+@font-face {
+    font-family: 'Source Sans Pro'; ;
+    src: url(fonts/SourceSansPro-Regular.otf) format('opentype');
+}
+@font-face {
+    font-family: 'Source Sans Pro Semibold';
+    src: url(fonts/SourceSansPro-Semibold.otf) format('opentype');
+}
+@font-face {
+    font-family: 'Source Sans Pro Bold';
+    src: url(fonts/SourceSansPro-Bold.otf) format('opentype');
+}
+@font-face {
+    font-family: 'Source Sans Pro Light';
+    src: url(fonts/SourceSansPro-Light.otf) format('opentype');
+}
+html{
+    scroll-behavior: smooth;
+}
+header{
+     position: relative;
+     height: 100px;
+     z-index: 1000;
+}
+nav {
+    width: 100%;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+}
+/* New rules for toggle behavior */
+#menu-toggle {
+  display: none;
+}
+
+/* Hide checkbox by default */
+#menu-toggle {
+  display: none;
+}
+
+/* Default icon visibility */
+.menu-btn .menu-icon {
+  display: inline-block;
+  font-size: 25px;
+}
+.menu-btn .exit-icon {
+  display: none;
+}
+
+/* When checkbox is checked, toggle icons */
+#menu-toggle:checked ~ .nav-top .menu-icon {
+  display: none;
+}
+
+#menu-toggle:checked ~ .nav-top .exit-icon {
+  display: inline-block;
+}
+
+
+
+/* Wrapper label for both icons */
+.menu-btn {
+  display: none;
+  cursor: pointer;
+  z-index: 1001;
+  margin-top: 35px;
+  color: var(--default-text-color-light);
+}
+nav img{
+    width: 150px;
+    padding: 30px 0;
+}
+nav ul {
+    display: flex;
+    list-style-type: none
+}
+nav ul li{
+    margin-top: 5px;
+    padding: 30px 20px;
+    font-family: 'Source Sans Pro Semibold';
+    font-size: 14px;
+    cursor: pointer;
+}
+nav ul li a{
+    text-decoration: none;
+    color: var(--default-text-color-light);
+}
+
+a:hover, a:active{
+    color: var(--link-hover-color);
+}
+
+.hero-section{
+    position: relative;
+    background-image: url(images/headphones_hero_1.jpg);
+    background-repeat: no-repeat;
+    width: 100%;	
+    height: 1093px;
+    margin-top: -100px;
+}
+.hero-section__text{
+    position: absolute;
+    width: 60%;
+    top: 33.5%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    color: var(--default-text-color-light);
+    text-align: center;
+}
+.hero-section__text h1{
+    font-family: 'Source Sans Pro Bold';
+}
+.hero-section__text .hero-p1{
+    font-family: 'Source Sans Pro Semibold';
+    font-size: 18px;
+   
+}
+.hero-section__text .hero-p2{
+    font-size: 18px;
+    font-family: 'Source Sans Pro';
+    line-height: 30px;
+}
+button{
+    border-radius: 50px;
+    border: none;
+    width: 150px;
+    height: 40px;
+    font-size: 14px;
+    background-color: var(--link-hover-color);
+    color: var(--default-text-color-light);
+    box-shadow: 0px 2px 20px 0px #00000080;
+    text-transform: uppercase;
+}
+button.hero-btn{
+    margin: 65px 0;
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro';
+}
+button:hover, button:active{
+   opacity: 0.9;
+}
+
+@media screen and (max-width: 768px){
+        
+    .hero-section__text{
+        width: 60%;
+        top: 30%;
+    }
+}
+@media screen and (max-width: 425px) {
+  nav {
+    margin-top: -15px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-btn {
+    display: block;
+    margin-left: auto;
+    margin-right: 20px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    padding-bottom: 70px;
+    text-align: center;
+  }
+
+  #menu-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: 15px 0;
+  }
+
+  .nav-logo {
+    margin: 20px;
+    order: 1;
+  }
+  .nav-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    }
+
+    .nav-logo {
+    margin-right: 32%;
+    }
+
+    .menu-btn {
+    margin: 0;
+    }
+   #menu-toggle:checked ~ .hero-section .hero-section__text h1 {
+       margin-top: 100px; /* or more, adjust as needed */
+     }
+
+    .hero-section{
+        margin-top: -60%;
+        background-position: center;
+    }
+   
+    .hero-section__text{
+      width: 70%;
+    }
+
+}
+@media screen and (max-width: 375px) {
+    .nav-logo{
+      margin-right: 30%;
+    }
+    .hero-section {
+        margin-top: -70%;
+    }
+}
+.about-section{
+    position: relative;
+    margin: -200px 150px 80px 150px; 
+    font-family: 'Source Sans Pro';
+}
+.about-text{
+    text-align: center;
+    padding: 0 20%;
+    color: var(--default-text-color-dark);
+    
+}
+.about-text h2{
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+.about-text p{
+    font-size: 18px;
+    line-height: 35px;
+    margin-bottom: 100px;
+}
+.about-icons{
+    margin: 0 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.icon-container{
+    
+    width: 250px;
+    text-align: center;
+}
+.icon-container h3{
+    font-size: 20px;
+    margin: 20px 0;
+    color: var(--default-text-color-dark);
+}
+.icon-container p{
+    font-size: 16px;
+    line-height: 30px;
+    color: var(--default-text-color-dark);
+}
+i.icon{
+    font-size: 100px;
+    color: var(--link-hover-color);
+}
+@media screen and (max-width: 1024px){
+    .about-section{
+        margin: -200px 100px 80px 100px;
+    }
+    .about-text{
+        padding: 0 10%;
+    }
+    .about-text p{
+        margin-bottom: 70px;
+    }
+    .about-icons{
+        margin: 0;
+    }
+}
+@media screen and (max-width: 768px){
+    .about-section{
+        margin: -200px 70px 70px 70px;
+    }
+    .about-text h2 {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+    .about-text p{
+        font-size: 17px;
+        margin-bottom: 50px;
+    }
+    .icon-container h3 {
+        margin: 10px 0;
+        font-size: 16px;
+    }
+    .icon-container p{
+        font-size: 12px;
+        line-height: 26px;
+    }
+    i.icon{
+        font-size: 80px;
+    }
+}
+@media screen and (max-width: 425px){
+    .about-section{
+        margin: -60px 45px 30px 45px;
+    }
+    .about-text{
+        padding: 0 2%;
+    }
+    .about-icons{
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+}
+.results-section{
+    position: relative;
+
+    background: url(images/headphones_hero_2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;	
+    height: 800px;
+
+    padding: 120px 150px 80px 150px; 
+    font-family: 'Source Sans Pro';
+}
+.results-text{
+    text-align: center;
+    padding: 0 20%;
+    color: var(--default-text-color-light);
+    
+}
+.results-text h2{
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+.results-text p{
+    font-size: 18px;
+    line-height: 35px;
+    margin-bottom: 100px;
+}
+.results-icons{
+    margin: 0 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.results-icons h3{
+    font-size: 50px;
+}
+.icon-container{
+    position: relative;
+    width: 250px;
+    text-align: center;
+    color: var(--default-text-color-light);
+}
+.icon-text{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.icon-container img{
+    height: 200px;
+}
+.icon-container p{
+    font-size: 13px;
+    font-family: 'Source Sans Pro Light';
+}
+
+@media screen and (max-width: 1024px){
+    .results-section{
+        padding: 70px 100px 80px 100px;
+    }
+    .results-text{
+        padding: 0 10%;
+    }
+    .results-text p{
+        margin-bottom: 70px;
+    }
+    .results-icons{
+        margin: 0;
+    }
+    .icon-container img {
+        height: 175px;
+    }
+}
+@media screen and (max-width: 768px){
+    .results-section{
+        padding: 70px;
+        height: 550px;
+    }
+    .results-text{
+        padding: 0 1%;
+    }
+    .results-text h2 {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+    .results-text p{
+        font-size: 16px;
+        margin-bottom: 50px;
+    }
+    .icon-text h3 {
+        font-size: 30px;
+    }
+    .icon-text p{
+        font-size: 12px;
+    }
+     .icon-container img {
+        height: 135px;
+    }
+}
+@media screen and (max-width: 425px){
+    .results-section{
+        padding: 45px 30px;
+        height: fit-content;
+    }
+    .results-text{
+        padding: 0 2%;
+    }
+    .results-icons{
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+}
+
+.form-section{
+    position: relative;
+    width: 100%;
+    height: 550px;
+}
+.form-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+
+}
+.form-container h2{
+    text-align: center;
+    margin: 50px auto;
+}
+.form-container h2{
+     color: var(--default-text-color-dark);
+     font-family: 'Source Sans Pro';
+     font-size:  32px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+form label{
+    font-family: 'Source Sans Pro Bold';
+    color: var(--default-text-color-dark);
+}
+form input{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #bbb9b9;
+    margin-bottom: 40px;
+}
+form textarea{
+    height: 60px;
+    outline: none;
+    border: none;
+    border-top: 1px solid #bbb9b9;
+    margin-top: 16px;
+}
+form button{
+    margin: 15px auto;
+}
+@media screen and (max-width: 425px){
+    .form-container{
+        width: 320px;
+    }
+}
+
+footer{
+    position: relative;
+    width: 100%;
+    height: 250px;
+    background-color: var(--default-text-color-dark);
+    color: var(--default-text-color-light);
+}
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 100px;
+    display: flex;
+    justify-content: space-between;
+}
+footer img{
+    width: 150px;
+}
+.footer-icon-container i{
+    font-size: 15px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--default-text-color-light);
+    color: var(--default-text-color-dark);
+    margin-left: 15px;
+
+    text-align: center;
+    line-height: 30px;
+}
+.footer-icon-container i:hover{
+    background-color: var(--link-hover-color);
+    color: var(--default-text-color-dark);
+}
+footer p{
+    font-family: 'Source Sans Pro Extra-light';	
+    color: #FFFFFF;
+    font-weight: 100;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    opacity: 0.35;
+    text-align: center;
+
+}
+@media screen and (max-width: 425px){
+    .footer-container{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 60px 100px 40px 100px;
+}
+    footer p{
+        display: inline-block;
+        position: absolute;
+        bottom: 5%;
+        left: 52.5%;
+        transform: translate(-50%, -50%);
+    }
+}
