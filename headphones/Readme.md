@@ -1,1 +1,0 @@
-This directory contains the html and css implementation of the headphones website
